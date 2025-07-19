@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema({
-  content: { type: String, required: true },
-  completed: { type: Boolean, default: false },
-  list: { type: mongoose.Schema.Types.ObjectId, ref: "List", required: true }
+  name: { type: String, required: true },
+  done: { type: Boolean, default: false },
+  plan: { type: mongoose.Schema.Types.ObjectId, ref: "Plan", required: true }
 }, {
   timestamps: true
 });
